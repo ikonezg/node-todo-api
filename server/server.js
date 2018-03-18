@@ -110,7 +110,7 @@ app.post('/users',(req, res)=>{
         return user.generateAuthToken();
         // res.send(doc);
     }).then((token)=>{
-        console.log(token);
+        
         res.header('x-auth', token).send(user);
 
     }).catch((e)=>{
